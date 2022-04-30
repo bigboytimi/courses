@@ -4,17 +4,17 @@
 
 NFTs(Non-fungible Token) have taken the world by storm, hitting $25 billion dollar sales in 2021. So what is an NFT and problems do they solve?
 
-Before we explore these questions we need to look at the double spend problem. Prior to Bitcoin's blockchain it was challenging to figure out how to prevent someone from copying and pasting a digital dollar or any digital asset like an MP3 or a digital piece of art work. If you were to buy a digital piece of art work, there was no straight forward to identify that the art work is a one of one collection that you are the sole owner of us.
+Before we explore these questions we need to look at the double spend problem. Prior to Bitcoin's blockchain it was challenging to figure out how to prevent someone from copying and pasting a digital dollar or any digital asset like an MP3 or a digital piece of art work. If you were to buy a digital piece of art work, there is no straight forward way to determine that the piece of digital art work you purchased is a one of one collection that belongs solely to you.
 
 ![Credit: BitPanda](https://cadena.incl.us/wp-content/uploads/2022/01/double-spending.png)
 
 *Credit: BitPanda*
 
-The blockchain solved this problem by verfiying every transaction and making transactions irrerversable and immutable but it still didn't solve the "fungible" aspect of digital ownership. Meaning while you can own Bitcoin, the qualities and properties of your Bitcoin are the same as every other person's Bitcoin. We'll come back to how this was solved on Ethereum but first we need to talk about ERC-20 tokens.
+The blockchain solved this problem by verfiying every transaction and making transactions irrerversible and immutable but it still didn't solve the "fungible" aspect of digital ownership. Meaning while you can own Bitcoin, the qualities and properties of your Bitcoin are the same as every other person's Bitcoin. We'll come back to how this was solved on Ethereum but first we need to talk about ERC-20 tokens.
 
 The Ethereum blockchain allowed for smart contracts (think of this as a contract written in code) which then gave rise for the ability for anyone to launch their own cryptocurrency on top of the Ethereum blockchain via the [ERC-20 Token](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) standard. Introduced in 2015 the ERC-20 standard provided a set of standardize rules for how tokens should be created on top of Ethereum but these tokens were still fungible, meaning noting distuginish my Dogecoin from yours. 
 
-Meet the ERC-721 standard which launched in 2017. This standard allowed for the creating of "none-fungible" tokens, meaning there can only be a one of a kind version of a token with a unique set of properties and attributes. Let's take for instance we're creating an NFT of a video game character. This characters metadata can include the url to where the JPEG file is stored of the character, the name of the character, any special attributes and properties like how many lives does this character have, can this character only use certain items in the game, etc. Cryptokittens was one of the early projects to adopt the standard for their virtual cats.
+Meet the ERC-721 standard which launched in 2017. This standard allowed for the creating of "non-fungible" tokens, meaning there can only be a one of a kind version of a token with a unique set of properties and attributes. Let's take for instance we're creating an NFT of a video game character. This characters metadata can include the url to where the JPEG file is stored of the character, the name of the character, any special attributes and properties like how many lives does this character have, can this character only use certain items in the game, etc. Cryptokittens was one of the early projects to adopt the standard for their virtual cats.
 
  Its a common misconception that NFTs can only be JPEGs, they can be any digital file you attach to them and even be paired with real world objects. In fact the NFT standard just holds the meta data which  properties, and attributes of a collection on the blockchain or "on chain". So what is commonly reffered to as an "NFT" is really just an item's metadata stored on the blockchain following the ERC-721 standard that ensures the item is unique. This metadata can have different combinations that can be used to generate new characters on the fly to form an entire collection.
 
@@ -54,7 +54,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721Full.sol";
 import "@openzeppelin/contracts/drafts/Counters.sol";
 ```
 
-Here we're defining the version of solidity we're using. Then we're importing in OpenZeppelin's implemnetation of the ERC-721 standard which comes with some hand functions like checking who the owner of an NFT is and minting the NFTs.
+Here we're defining the version of solidity we're using. Then we're importing in OpenZeppelin's implementation of the ERC-721 standard which comes with some hand functions like checking who the owner of an NFT is and minting the NFTs.
 
 ```solidity
 contract GameItem is ERC721Full {
